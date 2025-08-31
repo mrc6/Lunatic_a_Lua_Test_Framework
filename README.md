@@ -7,4 +7,7 @@ Example of use:
   
 Results:   
 
-<img width="1032" height="197" alt="image" src="https://github.com/user-attachments/assets/0220eb90-fc8f-4dc5-85de-c07d6cf9da3d" />
+<img width="1032" height="197" alt="image" src="https://github.com/user-attachments/assets/0220eb90-fc8f-4dc5-85de-c07d6cf9da3d" />   
+
+To run this repository test example:   
+lua testcase.lua
