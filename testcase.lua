@@ -1,5 +1,5 @@
 --loading the framework
-local describe = require('unit_to_the_moon')
+local describe = require('lunatic')
 
 --runnint set of tests
 describe('Test function', function ()
