@@ -10,7 +10,7 @@ Results:
 <img width="1032" height="197" alt="image" src="https://github.com/user-attachments/assets/0220eb90-fc8f-4dc5-85de-c07d6cf9da3d" />   
 
 To run this repository test example:   
-lua testcase.lua
+lua unity_testcase.lua
 
 Complementary tool:   
 https://github.com/aryajur/luawebdriver
