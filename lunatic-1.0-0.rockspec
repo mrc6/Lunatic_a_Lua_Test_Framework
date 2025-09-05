@@ -16,7 +16,7 @@ dependencies = {
   "lua >= 5.1",
   "luasocket >= 2.0",
   "dkjson >= 2.8-1",
-  "ltn12 >= scm-0",
+  "ltn12 >= 0",
   "tableutils >= 1.21.07.27-3"
 }
 build = {
