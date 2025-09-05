@@ -23,6 +23,6 @@ build = {
     framework = "lib/lunatic.lua",
     append_row = "lib/append_row_at_file.lua",
     webdriver  = "lib/luawebdriver.lua",
-    tableutils = "tableUtils.lua"
+    tableutils = "lib/tableUtils.lua"
   }
 }
