@@ -15,15 +15,14 @@ Lua Test Framework for automation (Unity, Web, Desktop, ALL)
 dependencies = {
   "lua >= 5.1",
   "luasocket >= 2.0",
-  "dkjson >= 2.8-1",
-  "ltn12 >= 0",
-  "tableutils >= 1.21.07.27-3"
+  "dkjson >= 2.8-1"
 }
 build = {
   type = "builtin",
   modules = {
     framework = "lib/lunatic.lua",
     append_row = "lib/append_row_at_file.lua",
-    webdriver  = "lib/luawebdriver.lua"
+    webdriver  = "lib/luawebdriver.lua",
+    tableutils = "tableUtils.lua"
   }
 }
