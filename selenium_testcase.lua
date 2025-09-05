@@ -1,5 +1,3 @@
---dependencies: lua selenium. How to install: luarocks install luaselenium
-
 --loading the framework
 local describe = require('lunatic')
 
