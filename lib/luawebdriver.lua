@@ -13,7 +13,7 @@ local type = type
 local table = table
 local pairs = pairs
 
---local print = print
+local print = print
 
 
 -- Create the module table here
@@ -158,6 +158,9 @@ meta = {
 				end
 				local endP = ep.endpoint
 				endP = endP:gsub("%{session id%}",conn.sessionId)
+				if para.body.elementId then
+				  endP = endP:gsub("%{elementId%}",para.body.elementId)
+				end
 				for k,v in pairs(para) do
 					endP = endP:gsub("%{"..k.."%}",v)
 				end
