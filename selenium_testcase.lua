@@ -14,22 +14,57 @@ local setup = {
   end
 }
 
+-- Using os.time() for seconds
+os = require("os")
+function wait(seconds)
+  local start_time = os.time()
+    repeat until os.time() > start_time + seconds
+end
+
 local conn = setup.get_connection()
 
 --runnint set of tests
 describe('Test function', function ()
-  it('This is a passing test', function ()
-    local stat,msg = conn:gotoURL({ body = { url = "http://google.com"} })  
-    local expected_name = "I am a string"
-    local obtained_name = "I am a string" --do some action that results the expected string
-    local failure_comment = "Expected name was "..expected_name..", but is "..obtained_name
-    assert(obtained_name == expected_name, failure_comment)
+  it('The best programming language', function ()
+    local stat,msg = conn:gotoURL({ body = { url = "http://google.com"} })
+
+    -- below an example of find_element method to be implemented (by you!)
+    local element = conn:findElement({ body = { using = "tag name", value = "textarea" } }).value
+    element_properties = {}
+    for chave, valor in pairs(element) do
+      table.insert(element_properties,valor)
+    end
+    element_id = element_properties[1]
+
+    -- sending keys to element
+    conn:elementSendKeys({ body = { elementId = element_id, text = "Lua Programming Language" } })
+    
+    wait(5)
   end)
-  it('This is a failing test', function ()
+  it('Check Gmail Page Title', function ()
     local stat,msg = conn:gotoURL({ body = { url = "http://google.com"} }) 
-    local expected_name = "I am a string"
-    local obtained_name = "I am a number" --do some action that results the expected string
-    local failure_comment = "Expected name was "..expected_name..", but is "..obtained_name
+    local expected_title = "Gmail\: Private and secure email at no cost \| Google Workspace"
+    local obtained_title = "Default String" --do some action that results the expected string
+    
+    
+    -- clicking in the first link
+    local element = conn:findElement({ body = { using = "xpath", value = "//a/parent::*" } }).value
+    element_properties = {}
+    for chave, valor in pairs(element) do
+      table.insert(element_properties,valor)
+    end
+    element_id = element_properties[1]
+    
+    element_text = conn:getElementText({ elementId = element_id}).value --should be Gmail link
+    wait(5)--needs improvement for dynamic wait
+    
+    conn:elementClick({ body = { elementId = element_id } })
+    wait(5) --needs improvement for dynamic wait
+    
+    print(conn:getTitle().value)
+    obtained_title = conn:getTitle().value
+    
+    local failure_comment = "Expected name was "..expected_title..", but is "..obtained_title
     assert(obtained_name == expected_name, failure_comment)
   end)
 end)
