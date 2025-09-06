@@ -43,7 +43,7 @@ describe('Test function', function ()
   end)
   it('Check Gmail Page Title', function ()
     local stat,msg = conn:gotoURL({ body = { url = "http://google.com"} }) 
-    local expected_title = "Gmail\: Private and secure email at no cost \| Google Workspace"
+    local expected_title = "Gmail: Private and secure email at no cost | Google Workspace"
     local obtained_title = "Default String" --do some action that results the expected string
     
     
