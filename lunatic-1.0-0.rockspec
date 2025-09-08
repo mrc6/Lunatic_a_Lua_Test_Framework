@@ -19,10 +19,15 @@ dependencies = {
 }
 build = {
   type = "builtin",
-  modules = {
-    framework = "lib/lunatic.lua",
-    append_row = "lib/append_row_at_file.lua",
-    webdriver  = "lib/luawebdriver.lua",
-    tableutils = "lib/tableUtils.lua"
+  modules = {},
+  install = {
+    lua = {
+      lunatic = "lunatic.lua"
+    },
+    lib = {
+      append_row_at_file = "lib/append_row_at_file.lua",
+      luawebdriver  = "lib/luawebdriver.lua",
+      tableUtils = "lib/tableUtils.lua"
+    }
   }
 }
