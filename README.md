@@ -12,5 +12,7 @@ Results:
 To run this repository test example:   
 lua unity_testcase.lua
 
-Complementary tool:   
-lib/luawebdriver.lua
+Selenium example:
+
+Let Gecko driver running
+lua ./examples/selenium_testcase.lua
