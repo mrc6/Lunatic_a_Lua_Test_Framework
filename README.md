@@ -14,5 +14,5 @@ lua unity_testcase.lua
 
 Selenium example:
 
-Let Gecko driver running
+Let Gecko driver running   
 lua ./examples/selenium_testcase.lua
