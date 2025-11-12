@@ -4,14 +4,19 @@ local append_row_at_file = require('append_row_at_file')
 local function describe(name, descriptor)
     local errors = {}
     local successes = {}
+    local skipped = {}
   
-    function it(spec_line, spec)
-      local status = xpcall(spec, function (err)
-        table.insert(errors, string.format("\t%s\n\t\t%s\n", spec_line, err))
-      end)
-  
-      if status then
-        table.insert(successes, string.format("\t%s\n", spec_line))
+    function it(spec_line, spec, skip)
+      if not skip then
+        local status = xpcall(spec, function (err)
+          table.insert(errors, string.format("\t%s\n\t\t%s\n", spec_line, err))
+        end)
+        
+        if status then
+          table.insert(successes, string.format("\t%s\n", spec_line))
+        end
+      else
+        table.insert(skipped, string.format("\t%s\n", spec_line))
       end
     end
   
@@ -37,6 +42,16 @@ local function describe(name, descriptor)
         first_line = successes[i]:gsub("[^\n]*$", "")
         result = first_line:gsub("[\t\n]", "")
         append_row_at_file.file('./tests.passed', result.."\n")
+      end
+    end
+
+    if #skipped > 0 then
+      print('Skipped:')
+      print(table.concat(skipped))
+      for i=1, #skipped do
+        first_line = skipped[i]:gsub("[^\n]*$", "")
+        result = first_line:gsub("[\t\n]", "")
+        append_row_at_file.file('./tests.skiped', result.."\n")
       end
     end
   end
