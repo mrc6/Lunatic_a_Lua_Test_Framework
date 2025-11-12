@@ -15,4 +15,10 @@ describe('Test function', function ()
     local failure_comment = "Expected name was "..expected_name..", but is "..obtained_name
     assert(obtained_name == expected_name, failure_comment)
   end)
+  it('This test will be skiped', function ()  
+    local expected_name = "I am a string"
+    local obtained_name = "I am not a string" --do some action that results the expected string
+    local failure_comment = "Expected name was "..expected_name..", but is "..obtained_name
+    assert(obtained_name == expected_name, failure_comment)
+  end, 'skiped')
 end)
