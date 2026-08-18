@@ -28,7 +28,8 @@ build = {
       append_row_at_file = "lib/append_row_at_file.lua",
       luawebdriver  = "lib/luawebdriver.lua",
       tableUtils = "lib/tableUtils.lua",
-      lunatic = "lib/lunatic.lua"
+      lunatic = "lib/lunatic.lua",
+      gallium_webdriver = "lib/gallium_webdriver.lua"
     }
   }
 }
