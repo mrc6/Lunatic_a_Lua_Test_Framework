@@ -22,12 +22,12 @@ build = {
   modules = {},
   install = {
     lua = {
-      lunatic = "lunatic.lua"
     },
     lib = {
       append_row_at_file = "lib/append_row_at_file.lua",
       luawebdriver  = "lib/luawebdriver.lua",
-      tableUtils = "lib/tableUtils.lua"
+      tableUtils = "lib/tableUtils.lua",
+      lunatic = "lib/lunatic.lua"
     }
   }
 }
