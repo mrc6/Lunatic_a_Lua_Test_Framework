@@ -12,10 +12,17 @@ Results:
 To run this repository test example:   
 lua unity_testcase.lua
 
-Selenium example:   
+### Gallium example (kinda Selenium):   
 Dependencies:   
 luasocks   
+    
 You can install the project using luarocks:   
 luarocks install lunatic   
+    
 Let Gecko driver running   
-lua ./examples/selenium_testcase.lua
+    
+lua ./examples/gallium_testcase.lua   
+    
+P.S.: If you not installed from luarocks, you can download this repo, cd into Lunatic_a_Lua_Test_Framework and copy needed libs and tests to the local folder:    
+cp ./lib/* ./    
+cp ./examples/* ./
