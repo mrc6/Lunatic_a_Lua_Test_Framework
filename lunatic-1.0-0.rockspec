@@ -22,6 +22,7 @@ build = {
   modules = {},
   install = {
     lua = {
+      lunatic = "lunatic.lua"
     },
     lib = {
       append_row_at_file = "lib/append_row_at_file.lua",
