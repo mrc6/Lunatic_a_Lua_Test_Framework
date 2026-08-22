@@ -1,6 +1,11 @@
 # Lunatic_a_Lua_Test_Framework
 Lunatic is a Lua Test Framework   
-
+      
+## Principles:    
+1) As simple as possible    
+2) Doesn't need to fit everything    
+3) If something is missing, you can build it yourself    
+    
 Example of use:   
 
 <img width="917" height="317" alt="image" src="https://github.com/user-attachments/assets/f322a478-0937-4dd6-b08e-b76de7cd4647" />
