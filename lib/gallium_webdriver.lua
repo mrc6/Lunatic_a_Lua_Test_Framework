@@ -29,6 +29,24 @@ local driver = {
         element_id = element_properties[1]
         return element_id 
     end,
+    find_element_by_class_name = function(conn, name)
+        local element = conn:findElement({ body = { using = "css selector", value = "." .. name } }).value
+        element_properties = {}
+        for chave, valor in pairs(element) do
+          table.insert(element_properties,valor)
+        end
+        element_id = element_properties[1]
+        return element_id 
+    end,
+    find_element_by_id = function(conn, name)
+        local element = conn:findElement({ body = { using = "css selector", value = "#" .. name } }).value
+        element_properties = {}
+        for chave, valor in pairs(element) do
+          table.insert(element_properties,valor)
+        end
+        element_id = element_properties[1]
+        return element_id 
+    end,
     find_element_by_xpath = function(conn, xpath)
         local element = conn:findElement({ body = { using = "xpath", value = xpath } }).value
         element_properties = {}
@@ -37,6 +55,15 @@ local driver = {
         end
         element_id = element_properties[1]
         return element_id
+    end,
+    is_element_enabled = function(conn, element_id)
+        return conn:isElementEnabled( { elementId = element_id } ).value
+    end,
+    is_element_displayed = function(conn, element_id)
+        return conn:isElementDisplayed( { elementId = element_id } ).value
+    end,
+    get_element_text = function(conn, element_id)
+        return conn:getElementText( { elementId = element_id } ).value
     end,
     get_title = function(conn)
         return conn:getTitle().value

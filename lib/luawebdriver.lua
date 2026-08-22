@@ -113,6 +113,7 @@ meta = {
 			{name = "findElementsFromElement",method="POST",endpoint = [[/session/{session id}/element/{elementId}/element]]},
 			{name = "findElementFromShadowRoot",method="POST",endpoint = [[/session/{session id}/shadow/{shadowId}/element]]},
 			{name = "findElementsFromShadowRoot",method="POST",endpoint = [[/session/{session id}/shadow/{shadowId}/elements]]},
+			{name = "isElementDisplayed",method="GET",endpoint = [[/session/{session id}/element/{elementId}/displayed]]},
 			{name = "isElementSelected",method="GET",endpoint = [[/session/{session id}/element/{elementId}/selected]]},
 			{name = "getElementAttribute",method="GET",endpoint = [[/session/{session id}/element/{elementId}/attribute/{name}]]},
 			{name = "getElementProperty",method="GET",endpoint = [[/session/{session id}/element/{elementId}/property/{name}]]},
@@ -190,7 +191,7 @@ meta = {
 					return nil,msg
 				end
 				return stat
-			end		
+			end
 		end
 	end
 }
