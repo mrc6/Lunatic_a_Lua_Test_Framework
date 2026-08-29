@@ -22,6 +22,7 @@ Dependencies:
 luasocks   
     
 You can install the project using luarocks:   
+luarocks install luasocks    
 luarocks install lunatic   
     
 Let Gecko driver running   
