@@ -65,6 +65,9 @@ local driver = {
     get_element_text = function(conn, element_id)
         return conn:getElementText( { elementId = element_id } ).value
     end,
+    get_element_attribute = function(conn, element_id, attribute_name)
+        return conn:getElementAttribute( { elementId = element_id, name = attribute_name } ).value
+    end,
     get_title = function(conn)
         return conn:getTitle().value
     end,
