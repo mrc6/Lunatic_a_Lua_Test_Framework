@@ -13,12 +13,18 @@ local driver = {
         local stat,msg = conn:gotoURL({ body = { url = destination} })
         return stat,msg
     end,
+    element_clear = function(conn, element_id)
+        conn:elementClear({ body = { elementId = element_id } })
+    end,
     element_click = function(conn, element_id)
         conn:elementClick({ body = { elementId = element_id } })
     end,
     element_get_text = function(conn, element_id)
         return conn:getElementText({ elementId = element_id}).value
     
+    end,
+    execute_script = function(conn, script)
+        return conn:executeScript({ body = { script = script } }).value
     end,
     find_element_by_tagname = function(conn, name)
         local element = conn:findElement({ body = { using = "tag name", value = name } }).value
@@ -67,6 +73,9 @@ local driver = {
     end,
     get_element_attribute = function(conn, element_id, attribute_name)
         return conn:getElementAttribute( { elementId = element_id, name = attribute_name } ).value
+    end,
+    get_element_property = function(conn, element_id, property_name)
+        return conn:getElementProperty( { elementId = element_id, name = property_name } ).value
     end,
     get_title = function(conn)
         return conn:getTitle().value
