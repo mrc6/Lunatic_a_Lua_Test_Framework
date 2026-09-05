@@ -24,11 +24,9 @@ luasocks
 You can install the project using luarocks:   
 luarocks install luasocks    
 luarocks install lunatic   
+      
     
-Let Gecko driver running   
+`cd regression`    
+`lua web_regresion.lua`    
     
-lua ./examples/gallium_testcase.lua   
-    
-P.S.: If you not installed from luarocks, you can download this repo, cd into Lunatic_a_Lua_Test_Framework and copy needed libs and tests to the local folder:    
-cp ./lib/* ./    
-cp ./examples/* ./
+Created by mrc6   

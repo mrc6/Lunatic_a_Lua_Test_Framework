@@ -28,7 +28,8 @@ build = {
       luawebdriver  = "lib/luawebdriver.lua",
       tableUtils = "lib/tableUtils.lua",
       lunatic = "lib/lunatic.lua",
-      gallium_webdriver = "lib/gallium_webdriver.lua"
+      gallium_webdriver = "lib/gallium_webdriver.lua",
+      pwd = "lib/pwd.lua"
     }
   }
 }

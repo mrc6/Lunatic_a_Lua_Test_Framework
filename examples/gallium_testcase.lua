@@ -2,6 +2,9 @@
 local describe = require('lunatic')
 local gallium_webdriver = require('gallium_webdriver')
 
+-- Getting the config file
+local config = require('config')
+
 --loading the pwd module to get the absolute path of the file
 local pwd = require('pwd')
 
@@ -15,7 +18,7 @@ end
 local conn = gallium_webdriver.get_connection()
 
 --runnint set of tests
-describe('Test Google Search', function ()
+describe('--> Test Google Search', function ()
   it('The best programming language', function ()
     local obtained_title = "Default String" --do some action that results the expected string
     local expected_title = "Lua Programming Language"
@@ -60,14 +63,14 @@ describe('Test Google Search', function ()
 end)
 
 --runnint set of tests
-describe('Test local CAC TAT page', function ()
+describe('--> Test local CAC TAT page', function ()
   it('Check CAC TAT page title', function ()
     local obtained_title = "Default String" --do some action that results the expected string
     local expected_title = "Central de Atendimento ao Cliente TAT"
 
-    local local_url = pwd.abs_path("./src/index.html")
+    local local_url = pwd.abs_path(config.test_cases_path .. "/src/index.html")
     local stat,msg = gallium_webdriver.navigate(conn, "file://" .. local_url)
-  
+
     obtained_title = gallium_webdriver.get_title(conn) 
     --print(obtained_title)
     
@@ -78,7 +81,7 @@ describe('Test local CAC TAT page', function ()
   end)
   it('Fill required fields and submit form', function()
       
-    local local_url = pwd.abs_path("./src/index.html")
+    local local_url = pwd.abs_path(config.test_cases_path .. "/src/index.html")
     local stat,msg = gallium_webdriver.navigate(conn, "file://" .. local_url)
     
     -- Filling the required fields
@@ -118,7 +121,7 @@ describe('Test local CAC TAT page', function ()
     assert(not gallium_webdriver.is_element_displayed(conn, element_id), failure_comment)
   end)
   it('Display error message when submitting form with invalid email format', function()
-    local local_url = pwd.abs_path("./src/index.html")
+    local local_url = pwd.abs_path(config.test_cases_path .. "/src/index.html")
     local stat,msg = gallium_webdriver.navigate(conn, "file://" .. local_url)
     
     -- Filling the required fields
@@ -160,7 +163,7 @@ describe('Test local CAC TAT page', function ()
     assert(not gallium_webdriver.is_element_displayed(conn, element_id), failure_comment)
   end)
   it('Check the phone field only accepts numbers', function()
-    local local_url = pwd.abs_path("./src/index.html")
+    local local_url = pwd.abs_path(config.test_cases_path .. "/src/index.html")
     local stat,msg = gallium_webdriver.navigate(conn, "file://" .. local_url)
     
     -- Filling the phone field with letters
@@ -175,7 +178,7 @@ describe('Test local CAC TAT page', function ()
     assert(received_phone_value == expected_phone_value, failure_comment)
   end)
   it('Check error message when phone is required but not filled', function()
-    local local_url = pwd.abs_path("./src/index.html")
+    local local_url = pwd.abs_path(config.test_cases_path .. "/src/index.html")
     local stat,msg = gallium_webdriver.navigate(conn, "file://" .. local_url)
     
     -- Filling the required fields
@@ -221,7 +224,7 @@ describe('Test local CAC TAT page', function ()
     assert(not gallium_webdriver.is_element_displayed(conn, element_id), failure_comment)
   end)
   it('Verify if the field was cleanned', function()
-    local local_url = pwd.abs_path("./src/index.html")
+    local local_url = pwd.abs_path(config.test_cases_path .. "/src/index.html")
     local stat,msg = gallium_webdriver.navigate(conn, "file://" .. local_url)
     
     -- Filling the required fields
@@ -264,7 +267,7 @@ describe('Test local CAC TAT page', function ()
     assert(received_text_area_value == expected_text_area_value, failure_comment)
   end)
   it('Display error message when submitting form without filling required fields', function()
-    local local_url = pwd.abs_path("./src/index.html")
+    local local_url = pwd.abs_path(config.test_cases_path .. "/src/index.html")
     local stat,msg = gallium_webdriver.navigate(conn, "file://" .. local_url)
     
     -- Submitting the form without filling required fields
@@ -283,7 +286,7 @@ describe('Test local CAC TAT page', function ()
     assert(received_error_message == expected_error_message, failure_comment)
   end)
   it('Select Youtube product by text', function()
-    local local_url = pwd.abs_path("./src/index.html")
+    local local_url = pwd.abs_path(config.test_cases_path .. "/src/index.html")
     local stat,msg = gallium_webdriver.navigate(conn, "file://" .. local_url)
     
     -- Selecting Youtube product by text

@@ -2,7 +2,8 @@
 --local pwd = require('pwd')
 local config = {
     browser_webdriver_path = "../drivers", --All paths are relative to the conf folder of the project, so this path is relative to the conf folder of the project
-    browser_webdriver_executable = "geckodriver"
+    browser_webdriver_executable = "geckodriver",
+    test_cases_path = "../examples", --All paths are relative to the conf folder of the project, so this path is relative to the conf folder of the project
 }
 
 return config
