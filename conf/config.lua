@@ -1,9 +1,11 @@
---package.path = package.path .. ";/root/my-documents/temp/Lua/Lunatic/Lunatic_a_Lua_Test_Framework/examples/?.lua"
+--package.path = package.path .. ";/../examples/?.lua"
 --local pwd = require('pwd')
+
+ --All paths are relative to the conf folder of the project
 local config = {
-    browser_webdriver_path = "../drivers", --All paths are relative to the conf folder of the project, so this path is relative to the conf folder of the project
+    browser_webdriver_path = "../drivers",
     browser_webdriver_executable = "geckodriver",
-    test_cases_path = "../examples", --All paths are relative to the conf folder of the project, so this path is relative to the conf folder of the project
+    test_cases_path = "../examples",
 }
 
 return config

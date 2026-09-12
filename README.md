@@ -26,7 +26,14 @@ luarocks install luasocks
 luarocks install lunatic   
       
     
+Check the configuration in    
+`conf/config.lua`    
+    
+Basically you need to configure the webdriver location    
+    
+To run the web regresion, follow the steps below:    
+    
 `cd regression`    
 `lua web_regresion.lua`    
     
-Created by mrc6   
+Created with ❤️​ by mrc6   
