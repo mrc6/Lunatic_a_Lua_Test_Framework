@@ -63,12 +63,17 @@ local driver = {
         return element_id
     end,
     find_elements_by_xpath = function(conn, xpath)
-        local element = conn:findElements({ body = { using = "xpath", value = xpath } }).value
+        local elements = conn:findElements({ body = { using = "xpath", value = xpath } }).value
         elements_properties = {}
-        for chave, valor in pairs(element) do
+        elements_id = {}
+        for chave, valor in pairs(elements) do
           table.insert(elements_properties,valor)
         end
-        elements_id = elements_properties[1]
+        for chave, tabela in pairs(elements_properties) do
+            for chave, valor in pairs(tabela) do
+                table.insert(elements_id,valor)
+            end
+        end
         return elements_id
     end,
     is_element_enabled = function(conn, element_id)

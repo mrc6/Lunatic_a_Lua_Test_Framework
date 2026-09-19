@@ -306,15 +306,13 @@ describe('--> Test local CAC TAT page', function ()
     local failure_comment = "Expected element text was "..expected_element_text..", but is "..element_text
     assert(element_text == expected_element_text, failure_comment)
   end)
-  it('Check all atendiment types', function()
+  it('Check all service types', function()
     local local_url = pwd.abs_path(config.test_cases_path .. "/src/index.html")
     local stat,msg = gallium_webdriver.navigate(conn, "file://" .. local_url)
     
-    -- Selecting Mentoria product by text
+    -- Selecting Services
     elements_id = gallium_webdriver.find_elements_by_xpath(conn, "//*[@type='radio']")
-    --gallium_webdriver.element_click(conn, element_id)
     for i, element_id in ipairs(elements_id) do
-      print(element_id)
       gallium_webdriver.element_click(conn, element_id)
       local received_selected_value = gallium_webdriver.get_element_property(conn, element_id, "checked")
       local expected_selected_value = true
