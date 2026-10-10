@@ -1,2 +1,5 @@
 examples/driver/geckodriver
 drivers/geckodriver
+regression/tests.failed
+regression/tests.passed
+regression/tests.skiped
