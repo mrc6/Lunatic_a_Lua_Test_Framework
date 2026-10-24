@@ -1,5 +1,5 @@
 package = "Lunatic"
-version = "1.1-0"
+version = "1.2-0"
 source = {
   url = "git://github.com/mrc6/Lunatic_a_Lua_Test_Framework.git"
 }
@@ -29,7 +29,8 @@ build = {
       tableUtils = "lib/tableUtils.lua",
       lunatic = "lib/lunatic.lua",
       gallium_webdriver = "lib/gallium_webdriver.lua",
-      pwd = "lib/pwd.lua"
+      pwd = "lib/pwd.lua",
+      rest_api = "lib/rest_api.lua"
     }
   }
 }
