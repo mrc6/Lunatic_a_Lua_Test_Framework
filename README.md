@@ -19,10 +19,13 @@ lua unity_testcase.lua
 
 ### Gallium example (kinda Selenium):   
 Dependencies:   
+lua5.1    
 luasocks   
-    
+luasec    
+
 You can install the project using luarocks:   
 luarocks install luasocks    
+luarocks install luasec   
 luarocks install lunatic   
       
     
