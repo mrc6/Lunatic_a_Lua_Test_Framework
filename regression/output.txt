@@ -14,7 +14,8 @@ Successes:
 	Check all service types
 	Check all checkboxes and unselect the last one
 	Select a file from fixtures folder
-	Verify if Pirvacy Policy opens in a new tab without the need of a click
+	Verify if Privacy Policy opens in a new tab without the need of a click
+	Make a http request
 
 Running test case: ../examples/gallium_google_testcase.lua
 Gmail: Secure, AI-Powered Email for Everyone | Google Workspace

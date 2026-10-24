@@ -7,3 +7,11 @@ Select a file from fixtures folder
 Select a file from fixtures folder
 Select a file from fixtures folder
 Verify if Pirvacy Policy opens in a new tab without the need of a click
+Make a http request
+Make a http request
+Make a http request
+Make a http request/usr/local/share/lua/5.2/socket/http.lua:39: module 'ssl.https' not found:no field package.preload['ssl.https']no file '/usr/local/share/lua/5.2/ssl/https.lua'no file '/usr/local/share/lua/5.2/ssl/https/init.lua'no file '/usr/local/lib/lua/5.2/ssl/https.lua'no file '/usr/local/lib/lua/5.2/ssl/https/init.lua'no file '/usr/share/lua/5.2/ssl/https.lua'no file '/usr/share/lua/5.2/ssl/https/init.lua'no file './ssl/https.lua'no file '../conf/ssl/https.lua'no file '../lib/ssl/https.lua'no file '/usr/local/lib/lua/5.2/ssl/https.so'no file '/usr/lib/x86_64-linux-gnu/lua/5.2/ssl/https.so'no file '/usr/lib/lua/5.2/ssl/https.so'no file '/usr/local/lib/lua/5.2/loadall.so'no file './ssl/https.so'no file '/usr/local/lib/lua/5.2/ssl.so'no file '/usr/lib/x86_64-linux-gnu/lua/5.2/ssl.so'no file '/usr/lib/lua/5.2/ssl.so'no file '/usr/local/lib/lua/5.2/loadall.so'
+Make a http request
+Make a http request
+Make a http request/usr/local/share/lua/5.2/socket/http.lua:39: module 'ssl.https' not found:no field package.preload['ssl.https']no file '/usr/local/share/lua/5.2/ssl/https.lua'no file '/usr/local/share/lua/5.2/ssl/https/init.lua'no file '/usr/local/lib/lua/5.2/ssl/https.lua'no file '/usr/local/lib/lua/5.2/ssl/https/init.lua'no file '/usr/share/lua/5.2/ssl/https.lua'no file '/usr/share/lua/5.2/ssl/https/init.lua'no file './ssl/https.lua'no file '../conf/ssl/https.lua'no file '../lib/ssl/https.lua'no file '/usr/local/lib/lua/5.2/ssl/https.so'no file '/usr/lib/x86_64-linux-gnu/lua/5.2/ssl/https.so'no file '/usr/lib/lua/5.2/ssl/https.so'no file '/usr/local/lib/lua/5.2/loadall.so'no file './ssl/https.so'no file '/usr/local/lib/lua/5.2/ssl.so'no file '/usr/lib/x86_64-linux-gnu/lua/5.2/ssl.so'no file '/usr/lib/lua/5.2/ssl.so'no file '/usr/local/lib/lua/5.2/loadall.so'
+Make a http requesterror loading module 'ssl.core' from file '/usr/local/lib/lua/5.2/ssl.so':
