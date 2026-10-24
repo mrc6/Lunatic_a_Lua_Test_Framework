@@ -1,5 +1,5 @@
 package = "Lunatic"
-version = "1.2-0"
+version = "1.2-1"
 source = {
   url = "git://github.com/mrc6/Lunatic_a_Lua_Test_Framework.git"
 }
@@ -15,6 +15,7 @@ Lua Test Framework for automation (Unity, Web, Desktop, ALL)
 dependencies = {
   "lua >= 5.1",
   "luasocket >= 2.0",
+  "luasec >= 1.0",
   "dkjson >= 2.8-1"
 }
 build = {
