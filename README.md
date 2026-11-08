@@ -38,5 +38,12 @@ To run the web regresion, follow the steps below:
     
 `cd regression`    
 `lua web_regresion.lua`    
+
+
+Regression using gallium web driver    
+https://github.com/mrc6/CAC-TAT-REGRESSION    
+    
+Github Action    
+https://github.com/mrc6/CAC-TAT-REGRESSION/blob/main/.github/workflows/regression.yml    
     
 Created with ❤️​ by mrc6   
